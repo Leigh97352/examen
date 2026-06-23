@@ -1,0 +1,718 @@
+================================================================
+   EXAMEN DE MEDIO TÃ‰RMINO â€” PROGRAMACIÃ“N AVANZADA EN C++
+   Universidad San Francisco de Quito â€” USFQ
+
+   "El software y las catedrales son casi lo mismo:
+    primero las construimos, luego rezamos."
+
+   Nombre: Leighann Baculima_________________________________________
+   Fecha:  23/06/2026_________________________________________
+   Nota:   _______ / 100
+
+   Instrucciones:
+   - DuraciÃ³n: 60 minutos
+   - Puedes usar el IDE para la SecciÃ³n C Ãºnicamente
+   - Las secciones A y B son SIN computadora â€” papel y lÃ¡piz
+   - En preguntas de cÃ³digo: la sintaxis debe ser C++ vÃ¡lido
+   - Justifica tus respuestas conceptuales â€” una respuesta
+     sin explicaciÃ³n recibe puntaje parcial
+
+   DistribuciÃ³n de tiempo recomendada:
+   - SecciÃ³n A (30 pts):  12â€“15 minutos  â†’ no mÃ¡s de 15
+   - SecciÃ³n B (25 pts):  15â€“18 minutos  â†’ no mÃ¡s de 18
+   - SecciÃ³n C (45 pts):  25â€“30 minutos  â†’ es la secciÃ³n
+     que mÃ¡s puntos vale, no la dejes para el final
+   - Puntos extra:        solo si terminas antes de los 60 min
+
+   CONSEJO: si llegas a los 25 minutos y aÃºn estÃ¡s en A o B,
+   pasa a C de inmediato â€” vale casi la mitad del examen.
+================================================================
+
+
+â•”â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•—
+â•‘  SECCIÃ“N A â€” TEORÃA CONCEPTUAL            (SIN IDE) 30 pts â•‘
+â•šâ•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+A1. (2 pts) Â¿En quÃ© momento determina C++ el tipo de una
+variable, y quÃ© ventaja concreta da eso al programador?
+
+C++ determina el tipo de una variable en tiempo de compilacion , la ventaja es que los errores de tipo se detectan antes de ejecutar
+el programa evitando fallos en tiempo de ejecucion
+_______________________________________________________________
+  _______________________________________________________________
+
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+A2. (6 pts) Una funciÃ³n en C++ puede recibir sus argumentos
+de tres formas distintas.
+Nombra cada forma con su tÃ©rmino tÃ©cnico en C++, explica
+quÃ© ocurre con el argumento original en cada caso, y da
+un ejemplo de situaciÃ³n real donde usarÃ­as cada una.
+
+  Primera forma â€” nombre tÃ©cnico: Paso por valor, se crea una copia del argumento pero el original no se modifica.
+Ejemplo: calcular el cuadrado de un numero sin alterarla variable original_____________________________
+  _______________________________________________________________
+  _______________________________________________________________
+
+  Segunda forma â€” nombre tÃ©cnico: Paso por referencia, la funcion trabaja directamente sobre el argumento original enotonces cualquier cambio lo afecta.
+Ejemplo: una funcion que incrementa el saldo de una cuenta bancaria _____________________________
+  _______________________________________________________________
+  _______________________________________________________________
+
+  Tercera forma â€” nombre tÃ©cnico: Paso por puntero, aqui se pasa la direccion de memoria del argumento entonces la funcion puede
+modificar el valor original mediante el puntero
+Ejemplo modificar un arreglo dinamico dentro de una funcion_____________________________
+  _______________________________________________________________
+  _______________________________________________________________
+
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+A3. (4 pts) En C++, el sÃ­mbolo * tiene mÃ¡s de un significado
+segÃºn el contexto en que aparece. Lo mismo ocurre con &.
+EnfÃ³cate en los usos relacionados con punteros y referencias
+â€” no en los operadores aritmÃ©ticos.
+
+  Explica los usos de * relacionados con punteros,
+  con un ejemplo de una lÃ­nea para cada uno:
+
+  Declarar un puntero:int* p_______________________________________________________________
+  Desreferenciar (acceder al valor apuntado):cout << *p_______________________________________________________________
+
+  Explica los usos de & relacionados con punteros y referencias,
+  con un ejemplo de una lÃ­nea para cada uno:
+
+  Obtener la direccion de una variable:int* p = &x_______________________________________________________________
+  Declarar una referencia:void f(int& r) {}_______________________________________________________________
+
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+A4. (6 pts) Completa la tabla con el valor de cada expresiÃ³n
+despuÃ©s de ejecutar este bloque. Trabaja A MANO â€” no uses IDE.
+
+  int x = 8;
+  int* p = &x;
+  int** pp = &p;
+
+  â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+  â”‚ ExpresiÃ³n                â”‚ Valor / resultado           â”‚
+  â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
+  â”‚ x                        â”‚8                             â”‚
+  â”‚ *p                       â”‚8                             â”‚
+  â”‚ **pp                     â”‚8                             â”‚
+  â”‚ &x == p                  â”‚true (1)                             â”‚
+  â”‚ *p = 20; â†’ valor de x    â”‚ 20                             â”‚
+  â”‚ **pp despuÃ©s de *p = 20  â”‚ 20                            â”‚
+  â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+A5. (4 pts) DespuÃ©s de liberar memoria con delete, un
+programador experimentado siempre escribe una lÃ­nea mÃ¡s.
+Â¿CuÃ¡l es esa lÃ­nea? Â¿Por quÃ© es necesaria? Â¿QuÃ© problema
+evita concretamente?
+
+  La lÃ­nea: ptr = nullptr_________________________________________________
+
+  Por quÃ©:
+  después del delete el puntero sigue guardando la direccion de memoria que ya fue liberada pr eso asignarlo a nullptr lo deja en un estado seguro y conocido_______________________________________________________________
+  _______________________________________________________________
+
+  QuÃ© problema evita:
+  evita el uso de un puntero colgante que si se desreferencia causa comportamiento
+indefinido o corrupcion de memoria _______________________________________________________________
+  _______________________________________________________________
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+A6. (8 pts) Lee el siguiente cÃ³digo. NO lo ejecutes â€”
+razona en papel.
+
+  #include <iostream>
+  using namespace std;
+
+  class Caja {
+  private:
+      int* datos;
+      int n;
+  public:
+      Caja(int tam) : n(tam) {
+          datos = new int[n];
+          for (int i = 0; i < n; i++)
+              datos[i] = i * 10;
+      }
+
+      ~Caja() {
+          delete[] datos;
+          datos = nullptr;
+      }
+
+      int obtener(int i) const {
+          return datos[i];
+      }
+  };
+
+  int main() {
+      Caja c1(3);
+      Caja* c2 = new Caja(2);
+
+      cout << c1.obtener(0) << endl;   // lÃ­nea 1
+      cout << c2->obtener(1) << endl;  // lÃ­nea 2
+
+      delete c2;
+      c2 = nullptr;
+
+      return 0;
+  }
+
+  a) (3 pts) Escribe la salida EXACTA del programa.
+     0________________________________________________________
+     10______________________________________________________
+     ________________________________________________________
+
+  b) (2 pts) Â¿QuÃ© ocurre en memoria cuando se ejecuta
+     delete c2? SÃ© especÃ­fico â€” Â¿quÃ© se destruye y en quÃ©
+     orden?
+     Al ejecutar delete c2 primero se llama al destructor de Caja que ejecuta delete datos liberando el arreglo interno y pone datos en nullptr; luego se libera el bloque de memoria del heap donde vivia el objeto caja________________________________________________________
+     ________________________________________________________
+
+  c) (3 pts) Si en lugar de delete c2 escribieras
+     c2 = nullptr sin hacer delete primero, Â¿quÃ© problema
+     ocurrirÃ­a? Â¿CÃ³mo se llama ese problema?
+     el puntero deja de apuntar al objeto pero la memoria en el heap nunca se libera entonces ese bloque queda inutilizable durante toda la ejecicion, eso causa el problema que es fuga de memoria________________________________________________________
+     ________________________________________________________
+
+
+â•”â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•—
+â•‘  SECCIÃ“N B â€” ANÃLISIS DE CÃ“DIGO           (SIN IDE) 25 pts â•‘
+â•šâ•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+B1. (10 pts) El siguiente cÃ³digo COMPILA sin errores pero
+produce un resultado incorrecto o tiene un problema grave
+en ejecuciÃ³n. Identifica QUÃ‰ estÃ¡ mal, POR QUÃ‰ ocurre,
+y cÃ³mo corregirlo.
+
+  PISTA: no busques errores de sintaxis â€” el compilador
+  no encontrÃ³ ninguno. Busca errores de lÃ³gica o de diseÃ±o.
+
+  #include <iostream>
+  using namespace std;
+
+  class Contador {
+  private:
+      int valor;
+  public:
+      Contador(int v) : valor(v) {}
+
+      int getValor() { return valor; }
+
+      void setValor(int nuevo) {
+          valor = nuevo;
+      }
+  };
+
+  void incrementar(Contador c) {
+      c.setValor(c.getValor() + 1);
+  }
+
+  int main() {
+      Contador cnt(0);
+      incrementar(cnt);
+      incrementar(cnt);
+      incrementar(cnt);
+      cout << cnt.getValor() << endl;
+      return 0;
+  }
+
+  Â¿QuÃ© imprime realmente? 0___________
+
+  El programador esperaba que imprimiera 3. Â¿Por quÃ© imprime
+  eso en cambio? Explica el mecanismo exacto.
+  la función recibe el objeto Contador por valor, entoncves trabaja sobre una copia local. Cada vez que se llama la copia se incrementa y luego se destruyem entonces el objeto original cnt nunca cambia y conserva el valor 0_______________________________________________________________
+  _______________________________________________________________
+
+  Â¿CÃ³mo lo corriges? Escribe la firma corregida de la funciÃ³n:
+  Contador& c_______________________________________________________________
+
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+B2. (8 pts) El siguiente cÃ³digo tambiÃ©n compila. Sin
+ejecutarlo, responde:
+
+  class Animal {
+  protected:
+      string nombre;
+  public:
+      Animal(string n) : nombre(n) {}
+      void hablar() {
+          cout << nombre << " hace un sonido." << endl;
+      }
+  };
+
+  class Perro : public Animal {
+  public:
+      Perro(string n) : Animal(n) {}
+      void hablar() {
+          cout << nombre << " dice: Guau!" << endl;
+      }
+  };
+
+  int main() {
+      Animal* a = new Perro("Rex");
+      a->hablar();
+      delete a;
+      return 0;
+  }
+
+  a) (3 pts) Â¿QuÃ© imprime a->hablar()? Â¿Por quÃ© imprime
+     ESO y no la versiÃ³n de Perro?
+     Imprime: "Rex hace un sonido.", pq hablar() no es virtual en Animal. El compilador decide en tiempo de compilacion q version llamar segun el tipo statico del puntero, que es Animal*, y llama a Animal::hablar()________________________________________________________
+     ________________________________________________________
+
+  b) (3 pts) Â¿QuÃ© cambio de UNA PALABRA en la clase Animal
+     harÃ­a que imprimiera la versiÃ³n de Perro? Explica el
+     mecanismo que activa ese cambio.
+     Eso activa el despacho dinámico q en tiempo de ejecucion el programa consulta la vtable del objeto real Perro y llama a Perro::hablar________________________________________________________
+     ________________________________________________________
+
+  c) (2 pts) Â¿Hay algÃºn problema con el delete a? Â¿Por quÃ©?
+     Sip ya q destructor de Animal no es virtual, asi q al hacer delete a solo se llama ~Animal() y no ~Perro(). si Perro tuviera recursos propios se produciria una fuga, la solucion es declarar el destructor de Animal como virtual________________________________________________________
+     ________________________________________________________
+
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+B3. (7 pts) Escribe quÃ© imprime cada fragmento SIN usar IDE.
+Si el fragmento tiene comportamiento indefinido, escrÃ­belo
+y explica por quÃ©.
+
+  Fragmento 1:
+    int arr[] = {5, 10, 15, 20};
+    int* p = arr;
+    p++;
+    cout << *p << endl;
+    cout << *(p + 1) << endl;
+  Imprime: 10
+15____________________________________________________
+
+  Fragmento 2:
+    int* p = new int(3);
+    delete p;
+    p = nullptr;
+    cout << *p << endl;
+  Imprime / ocurre: comportamiento indefinido___________________________________________
+  Por quÃ©: pq p fue liberado con delete y luego puesto en nullptr; desreferenciar nullptr es comportamiento indefinido____________________________________________________
+
+  Fragmento 3:
+    int buscar(int a, int b)   { return a + b; }
+    int buscar(int a, int b, int c) { return a + b + c; }
+    cout << buscar(2, 3) << endl;
+    cout << buscar(1, 2, 3) << endl;
+  Imprime: 5
+6____________________________________________________
+
+
+â•”â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•—
+â•‘  SECCIÃ“N C â€” CÃ“DIGO CON IDE               (CON IDE) 45 pts â•‘
+â•šâ•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+
+  Puedes usar el IDE para escribir, compilar y verificar.
+  Entrega: sube tu archivo .cpp al aula virtual al finalizar.
+  El cÃ³digo debe compilar sin errores â€” cÃ³digo que no
+  compila recibe 0 en esta secciÃ³n.
+
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+C1. (45 pts) IMPLEMENTACIÃ“N DESDE CERO
+
+Implementa un sistema de registro de temperaturas diarias.
+El usuario decide en tiempo de ejecuciÃ³n cuÃ¡ntos dÃ­as
+registrar. El sistema gestiona la memoria manualmente.
+
+â”€â”€â”€ LO QUE DEBES IMPLEMENTAR â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+
+  1. CLASE RegistroTemperaturas
+     Atributos privados:
+       double* lecturas   (arreglo dinÃ¡mico en heap)
+       int     capacidad  (cuÃ¡ntos dÃ­as puede almacenar)
+       int     cantidad   (cuÃ¡ntos dÃ­as se han registrado)
+
+     Constructor(int cap):
+       Usa lista de inicializaciÃ³n para capacidad y cantidad.
+       Reserva el arreglo dinÃ¡mico con new en el cuerpo.
+
+     Destructor:
+       Libera el arreglo con delete[].
+       Pone lecturas en nullptr.
+
+     void agregar(double temp):
+       Si hay espacio: agrega temp al final.
+       Si no hay espacio: imprime "Registro lleno."
+       Valida que temp estÃ© entre -50.0 y 60.0 â€”
+       si no estÃ¡ en rango imprime "Temperatura invalida."
+       y no agrega.
+
+     double promedio() const:
+       Retorna el promedio de las temperaturas registradas.
+       Si cantidad == 0 retorna 0.0.
+
+     double maxima() const:
+       Retorna la temperatura mÃ¡s alta registrada.
+
+     double minima() const:
+       Retorna la temperatura mÃ¡s baja registrada.
+
+     void imprimir() const:
+       Imprime cada temperatura con 1 decimal, separadas
+       por espacio, seguidas de un salto de lÃ­nea.
+       NOTA: usa setprecision(1) dentro de imprimir().
+
+  2. FUNCIÃ“N LIBRE (fuera de la clase):
+     void resumen(const RegistroTemperaturas& reg)
+       Imprime el reporte final con el formato de la
+       salida esperada mostrada abajo.
+       Recibe el objeto por REFERENCIA CONSTANTE â€”
+       no por copia, no por puntero.
+       NOTA: promedio, maxima y minima se imprimen con
+       2 decimales (setprecision(2)) dentro de resumen().
+
+  3. MAIN:
+     - Lee n del teclado (capacidad del registro)
+     - Crea un objeto RegistroTemperaturas en el STACK
+     - Lee n temperaturas del teclado una por una
+     - Llama a resumen() al final
+     - Crea el objeto en el STACK â€” el destructor se
+       llama automÃ¡ticamente al salir de scope de main
+       y libera el arreglo interno del heap
+
+â”€â”€â”€ ENTRADA Y SALIDA ESPERADA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+
+  Entrada de prueba 1:
+    5
+    22.5  18.0  35.0  -5.0  28.3
+
+  Salida esperada 1:
+    Temperaturas: 22.5 18.0 35.0 -5.0 28.3
+    Promedio : 19.76
+    Maxima   : 35.00
+    Minima   : -5.00
+
+  Entrada de prueba 2 (con valores invÃ¡lidos y registro lleno):
+    3
+    100.0  22.0  18.5  30.0  15.0
+
+  Salida esperada 2:
+    Temperatura invalida.
+    Registro lleno.
+    Registro lleno.
+    Temperaturas: 22.0 18.5 30.0
+    Promedio : 23.50
+    Maxima   : 30.00
+    Minima   : 18.50
+
+â”€â”€â”€ CRITERIOS DE EVALUACIÃ“N â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+
+  [ ] (5 pts)  Constructor correcto con new y lista de init
+  [ ] (5 pts)  Destructor correcto con delete[] y nullptr
+  [ ] (5 pts)  agregar() con validaciÃ³n de rango y capacidad
+  [ ] (5 pts)  promedio(), maxima(), minima() correctos (const)
+  [ ] (5 pts)  imprimir() correcto (const)
+  [ ] (8 pts)  resumen() recibe por referencia constante
+               e imprime con formato correcto
+  [ ] (7 pts)  main correcto: objeto en stack, lectura,
+               llamada a resumen, memoria liberada por scope
+  [ ] (5 pts)  El programa compila y reproduce ambas salidas
+
+  Escribe tu cÃ³digo aquÃ­:
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+class RegistroTemperaturas {
+private:
+    double* lecturas;
+    int capacidad;
+    int cantidad;
+
+public:
+    RegistroTemperaturas(int cap) : capacidad(cap), cantidad(0) {
+        lecturas = new double[capacidad];
+    }
+
+    ~RegistroTemperaturas() {
+        delete[] lecturas;
+        lecturas = nullptr;
+    }
+
+    void agregar(double temp) {
+        if (temp < -50.0 || temp > 60.0) {
+            cout << "Temperatura invalida." << endl;
+            return;
+        }
+        if (cantidad >= capacidad) {
+            cout << "Registro lleno." << endl;
+            return;
+        }
+        lecturas[cantidad++] = temp;
+    }
+
+    double promedio() const {
+        if (cantidad == 0) return 0.0;
+        double suma = 0.0;
+        for (int i = 0; i < cantidad; i++)
+            suma += lecturas[i];
+        return suma / cantidad;
+    }
+
+    double maxima() const {
+        double max = lecturas[0];
+        for (int i = 1; i < cantidad; i++)
+            if (lecturas[i] > max) max = lecturas[i];
+        return max;
+    }
+
+    double minima() const {
+        double min = lecturas[0];
+        for (int i = 1; i < cantidad; i++)
+            if (lecturas[i] < min) min = lecturas[i];
+        return min;
+    }
+
+    void imprimir() const {
+        cout << fixed << setprecision(1);
+        cout << "Temperaturas: ";
+        for (int i = 0; i < cantidad; i++) {
+            if (i > 0) cout << " ";
+            cout << lecturas[i];
+        }
+        cout << endl;
+    }
+
+    int getCantidad() const { return cantidad; }
+};
+
+void resumen(const RegistroTemperaturas& reg) {
+    reg.imprimir();
+    cout << fixed << setprecision(2);
+    cout << "Promedio : " << reg.promedio() << endl;
+    cout << "Maxima   : " << reg.maxima()   << endl;
+    cout << "Minima   : " << reg.minima()   << endl;
+}
+
+int main() {
+    int n;
+    cin >> n;
+
+    RegistroTemperaturas reg(n);
+
+    double temp;
+    for (int i = 0; i < n; i++) {
+        cin >> temp;
+        reg.agregar(temp);
+    }
+
+    resumen(reg);
+    return 0;
+}
+
+
+
+
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  â˜… FIN SECCIÃ“N C â€” Si deseas continÃºa con el Punto Extra â˜…
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  PUNTO EXTRA â€” SOBRECARGA Y ERRORES DE COMPILACIÃ“N  (+10 pts)
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+
+  Opcional. Puedes hacer una o ambas â€” los puntos se
+  acumulan. MÃ¡ximo posible: 100/100. Solo aplica si tu
+  nota base supera 60/100.
+
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+PE. (+10 pts)
+
+Un estudiante quiere que su clase Calculadora tenga dos
+versiones de calcularArea():
+  - Una que recibe el lado de un cuadrado
+  - Una que recibe la base y la altura de un rectÃ¡ngulo
+
+Escribe este cÃ³digo y lo sube convencido de que funciona:
+
+  class Calculadora {
+  public:
+      double calcularArea(double lado) {
+          return lado * lado;
+      }
+      double calcularArea(double lado) {
+          return lado * 2;
+      }
+  };
+
+El compilador rechaza el cÃ³digo. El estudiante no entiende
+por quÃ© â€” dice: "las dos funciones hacen cosas distintas,
+Â¿por quÃ© el compilador no las distingue?"
+
+  a) (3 pts) Explica exactamente por quÃ© el compilador
+     no puede distinguir estas dos funciones.
+     No basta decir "tienen el mismo nombre" â€” explica
+     el mecanismo tÃ©cnico que usa el compilador para
+     distinguir funciones sobrecargadas y por quÃ© ese
+     mecanismo falla aquÃ­.
+     El compilador identifica las funciones sobrecargadas por su firma q incluye el nombre y la lista de tipos de los parametros ambas versiones tienen exactamente la misma, por lo q para el compilador son indistinguibles sin  importar que el cuerpo sea diferente ya q la firma es identica y eso genera un error de redefinicion________________________________________________________
+     ________________________________________________________
+     ________________________________________________________
+
+  b) (3 pts) El estudiante querÃ­a implementar lo que
+     describiÃ³: Ã¡rea de cuadrado y Ã¡rea de rectÃ¡ngulo.
+     Escribe la versiÃ³n CORRECTA de la clase que logra
+     exactamente eso usando sobrecarga vÃ¡lida.
+
+     class Calculadora {
+     public:
+	double calcularArea(double lado) {
+        return lado * lado;
+    	}
+    	double calcularArea(double base, double altura) {
+        return base * altura;
+    	}
+     
+     };
+     (si necesitas mÃ¡s espacio usa el reverso de la hoja)
+
+  c) (2 pts) Hay un segundo error lÃ³gico en la segunda
+     funciÃ³n, independientemente del problema de sobrecarga.
+     Incluso si el compilador la aceptara, no calcula el
+     Ã¡rea de un rectÃ¡ngulo correctamente.
+     Â¿CuÃ¡l es ese error? Â¿QuÃ© deberÃ­a retornar?
+     la segunda funcion retorna lado * 2 que calcula el doble del lado no el area, el area de un rectángulo es base * altura ass que deberia retornar base * altura________________________________________________________
+     ________________________________________________________
+
+  d) (2 pts) El tipo de retorno de las dos funciones es
+     double en ambos casos. Â¿PodrÃ­a el compilador usar el
+     tipo de retorno para distinguirlas si fuera diferente
+     â€” por ejemplo una retorna double y la otra int?
+     Justifica.
+     No, el compilador no usa el tipo de retorno para resolver la sobrecarga si se llama calcularArea(5.0) con ambas versiones disponibles , el compilador no sabe cual elegir porque la distinción se basa exclusivamente en los parametros, no en lo que se hace con el resultado________________________________________________________
+     ________________________________________________________
+
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  PUNTO EXTRA 2 â€” ESTRUCTURAS DE DATOS Y BIG O     (+10 pts)
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+
+  (mismas condiciones que PE â€” ver arriba)
+
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+PE2. (+10 pts) Implementa la siguiente funciÃ³n:
+
+  int* encontrarRepetidos(int* arr, int n, int& cantRepetidos)
+
+  El usuario decide en tiempo de ejecuciÃ³n cuÃ¡ntos elementos
+  tendrÃ¡ el arreglo (n se lee del teclado).
+  La funciÃ³n recibe el arreglo y su tamaÃ±o.
+  Debe encontrar todos los valores que aparecen mÃ¡s de una
+  vez en arr y retornar un nuevo arreglo dinÃ¡mico con esos
+  valores sin duplicarlos en el resultado.
+  cantRepetidos debe quedar con la cantidad de elementos
+  del arreglo retornado.
+
+  REQUISITOS:
+  - arr se recibe por PUNTERO.
+  - cantRepetidos se pasa por REFERENCIA â€” la funciÃ³n lo
+    modifica directamente.
+  - El arreglo retornado se reserva con new[] en el heap.
+    El caller es responsable de liberarlo con delete[].
+  - Si no hay repetidos, retorna nullptr y cantRepetidos = 0.
+
+â”€â”€â”€ EJEMPLO DE EJECUCIÃ“N â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+
+  Entrada:
+    8
+    3  1  4  1  5  3  2  4
+
+  Salida esperada:
+    Repetidos (3): 3 1 4
+
+â”€â”€â”€ ADEMÃS DE LA IMPLEMENTACIÃ“N â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+
+  Responde por escrito:
+
+  Â¿CuÃ¡l es la complejidad temporal de tu implementaciÃ³n
+  en notaciÃ³n Big O en funciÃ³n de n?
+  O(n²)________________________________________________________
+
+  Â¿Por quÃ© es esa complejidad y no otra? Explica en
+  tÃ©rminos de cuÃ¡ntas operaciones hace el algoritmo
+  en relaciÃ³n a n.
+  por cada elemento del arreglo se recorre el arreglo completo para contar ocurrencias lo q da n × n operaciones en el peor caso________________________________________________________
+  ________________________________________________________
+
+  Â¿Existe una forma de resolverlo con menor complejidad?
+  Â¿A quÃ© costo?
+  Sip a usar un hash map, el costo es usar memoria adicional proporcional a n para la tabla hash________________________________________________________
+  ________________________________________________________
+
+  Escribe tu cÃ³digo aquÃ­ (funciÃ³n + main completo):
+  El main debe:
+    - Leer n del teclado
+    - Reservar el arreglo con new[]
+    - Leer n valores
+    - Llamar encontrarRepetidos()
+    - Imprimir el resultado
+    - Liberar AMBOS arreglos con delete[]
+
+#include <iostream>
+using namespace std;
+
+int* encontrarRepetidos(int* arr, int n, int& cantRepetidos) {
+    cantRepetidos = 0;
+
+    int* repetidos = new int[n];
+
+    for (int i = 0; i < n; i++) {
+        int conteo = 0;
+        for (int j = 0; j < n; j++)
+            if (arr[j] == arr[i]) conteo++;
+
+        if (conteo > 1) {
+            bool yaEsta = false;
+            for (int k = 0; k < cantRepetidos; k++)
+                if (repetidos[k] == arr[i]) { yaEsta = true; break; }
+            if (!yaEsta)
+                repetidos[cantRepetidos++] = arr[i];
+        }
+    }
+
+    if (cantRepetidos == 0) {
+        delete[] repetidos;
+        return nullptr;
+    }
+    return repetidos;
+}
+
+int main() {
+    int n;
+    cin >> n;
+    int* arr = new int[n];
+    for (int i = 0; i < n; i++)
+        cin >> arr[i];
+
+    int cantRepetidos = 0;
+    int* resultado = encontrarRepetidos(arr, n, cantRepetidos);
+
+    if (resultado == nullptr) {
+        cout << "No hay repetidos." << endl;
+    } else {
+        cout << "Repetidos (" << cantRepetidos << "): ";
+        for (int i = 0; i < cantRepetidos; i++) {
+            if (i > 0) cout << " ";
+            cout << resultado[i];
+        }
+        cout << endl;
+    }
+
+    delete[] arr;
+    delete[] resultado;
+    return 0;
+}
+
+
+
+
+
+
+================================================================
+FIN DEL EXAMEN
+================================================================
